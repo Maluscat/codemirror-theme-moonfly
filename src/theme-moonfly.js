@@ -4,46 +4,46 @@ import { tags as t } from '@lezer/highlight';
 
 
 // Background and foreground
-const black     = '#080808';
-const white     = '#c6c6c6';
+export const black     = '#080808';
+export const white     = '#c6c6c6';
 // Variations of charcoal-grey
-const grey0     = '#323437';
-const grey1     = '#373c4d';
-const grey254   = '#e4e4e4';
-const grey249   = '#b2b2b2';
-const grey247   = '#9e9e9e';
-const grey246   = '#949494';
-const grey244   = '#808080';
-const grey241   = '#626262';
-const grey239   = '#4e4e4e';
-const grey238   = '#444444';
-const grey237   = '#3a3a3a';
-const grey236   = '#2e2e2e';
-const grey235   = '#262626';
-const grey234   = '#1c1c1c';
+export const grey0     = '#323437';
+export const grey1     = '#373c4d';
+export const grey254   = '#e4e4e4';
+export const grey249   = '#b2b2b2';
+export const grey247   = '#9e9e9e';
+export const grey246   = '#949494';
+export const grey244   = '#808080';
+export const grey241   = '#626262';
+export const grey239   = '#4e4e4e';
+export const grey238   = '#444444';
+export const grey237   = '#3a3a3a';
+export const grey236   = '#2e2e2e';
+export const grey235   = '#262626';
+export const grey234   = '#1c1c1c';
 // const grey233   = '#121212';
 // Core theme colors
-const khaki     = '#c6c684';
-const yellow    = '#e3c78a';
-const orange    = '#de935f';
-const coral     = '#f09479';
-const orchid    = '#e196a2';
-const lime      = '#85dc85';
-const green     = '#8cc85f';
-const emerald   = '#36c692';
-const blue      = '#80a0ff';
-const sky       = '#74b2ff';
-const turquoise = '#79dac8';
-const lavender  = '#adadf3';
-const purple    = '#ae81ff';
-const cranberry = '#e65e72';
-const violet    = '#cf87e8';
-const crimson   = '#ff5189';
-const red       = '#ff5454';
+export const khaki     = '#c6c684';
+export const yellow    = '#e3c78a';
+export const orange    = '#de935f';
+export const coral     = '#f09479';
+export const orchid    = '#e196a2';
+export const lime      = '#85dc85';
+export const green     = '#8cc85f';
+export const emerald   = '#36c692';
+export const blue      = '#80a0ff';
+export const sky       = '#74b2ff';
+export const turquoise = '#79dac8';
+export const lavender  = '#adadf3';
+export const purple    = '#ae81ff';
+export const cranberry = '#e65e72';
+export const violet    = '#cf87e8';
+export const crimson   = '#ff5189';
+export const red       = '#ff5454';
 // Extra colors
-const spring    = '#00875f';
-const mineral   = '#314940';
-const bay       = '#4d5d8d';
+export const spring    = '#00875f';
+export const mineral   = '#314940';
+export const bay       = '#4d5d8d';
 
 
 const activeLine = grey237 + '50';
@@ -52,7 +52,7 @@ const searchMatch = emerald + '62';
 const searchMatchSelected = crimson + '62';
 
 
-const moonflyTheme = EditorView.theme({
+export const moonflyTheme = EditorView.theme({
   '&': {
     backgroundColor: black,
     color: white,
@@ -116,7 +116,7 @@ const moonflyTheme = EditorView.theme({
   dark: true
 });
 
-const moonflyHighlightBase = HighlightStyle.define([
+export const moonflyHighlightBase = HighlightStyle.define([
   {
     tag: t.comment,
     color: grey247,
@@ -149,9 +149,7 @@ const moonflyHighlightBase = HighlightStyle.define([
     ],
     color: orange
   }, {
-    tag: [
-      t.self
-    ],
+    tag: [ t.self ],
     color: green
   }, {
     tag: [
@@ -165,13 +163,10 @@ const moonflyHighlightBase = HighlightStyle.define([
     ],
     color: cranberry
   }, {
-    tag: [
-      t.regexp,
-      t.constant(t.variableName)
-    ],
+    tag: [ t.regexp, t.constant(t.variableName) ],
     color: purple
   }, {
-    tag: t.string,
+    tag: [ t.string ],
     color: khaki
   }, {
     tag: [
@@ -181,14 +176,10 @@ const moonflyHighlightBase = HighlightStyle.define([
     ],
     color: turquoise
   }, {
-    tag: [
-      t.angleBracket
-    ],
+    tag: [ t.angleBracket ],
     color: lime
   }, {
-    tag: [
-      t.invalid,
-    ],
+    tag: [ t.invalid ],
     color: crimson
   }, {
     tag: [
@@ -225,8 +216,7 @@ const moonflyHighlightBase = HighlightStyle.define([
 //   themeType: 'dark'
 // });
 
-
-export default [
+export const moonfly = [
   moonflyTheme,
   syntaxHighlighting(moonflyHighlightBase),
 ];
