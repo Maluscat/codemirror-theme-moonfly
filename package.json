@@ -1,4 +1,10 @@
 {
   "name": "codemirror-theme-moonfly",
-  "packageManager": "yarn@4.1.1"
+  "type": "module",
+  "packageManager": "yarn@4.1.1",
+  "dependencies": {
+    "@codemirror/language": "^6.10.1",
+    "@codemirror/view": "^6.26.3",
+    "@lezer/highlight": "^1.2.0"
+  }
 }
