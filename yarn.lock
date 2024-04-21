@@ -5,7 +5,37 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@codemirror/language@npm:^6.10.1":
+"@codemirror/autocomplete@npm:^6.0.0":
+  version: 6.16.0
+  resolution: "@codemirror/autocomplete@npm:6.16.0"
+  dependencies:
+    "@codemirror/language": "npm:^6.0.0"
+    "@codemirror/state": "npm:^6.0.0"
+    "@codemirror/view": "npm:^6.17.0"
+    "@lezer/common": "npm:^1.0.0"
+  peerDependencies:
+    "@codemirror/language": ^6.0.0
+    "@codemirror/state": ^6.0.0
+    "@codemirror/view": ^6.0.0
+    "@lezer/common": ^1.0.0
+  checksum: 10c0/629306843b348e39f3e8c6cc76dd0c1caf2a38e2ecbac391b095dcb97f94fa60130b33d9745020e0a95ede3f3ed0bf746ce0437d6db9dcbf8d14fa97e8fbc20f
+  languageName: node
+  linkType: hard
+
+"@codemirror/lang-css@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@codemirror/lang-css@npm:6.2.1"
+  dependencies:
+    "@codemirror/autocomplete": "npm:^6.0.0"
+    "@codemirror/language": "npm:^6.0.0"
+    "@codemirror/state": "npm:^6.0.0"
+    "@lezer/common": "npm:^1.0.2"
+    "@lezer/css": "npm:^1.0.0"
+  checksum: 10c0/1196926c0145156bf96f3c9ae71549fbf0a24aa27cdcdc5a7b11107e7c0dbbb3dfd2e84c552978b6378605e03921b0ddc0bfe0617800f7d15cbd245be2f57e40
+  languageName: node
+  linkType: hard
+
+"@codemirror/language@npm:^6.0.0, @codemirror/language@npm:^6.10.1":
   version: 6.10.1
   resolution: "@codemirror/language@npm:6.10.1"
   dependencies:
@@ -26,7 +56,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codemirror/view@npm:^6.23.0, @codemirror/view@npm:^6.26.3":
+"@codemirror/view@npm:^6.17.0, @codemirror/view@npm:^6.23.0, @codemirror/view@npm:^6.26.3":
   version: 6.26.3
   resolution: "@codemirror/view@npm:6.26.3"
   dependencies:
@@ -37,10 +67,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lezer/common@npm:^1.0.0, @lezer/common@npm:^1.1.0":
+"@lezer/common@npm:^1.0.0, @lezer/common@npm:^1.0.2, @lezer/common@npm:^1.1.0, @lezer/common@npm:^1.2.0":
   version: 1.2.1
   resolution: "@lezer/common@npm:1.2.1"
   checksum: 10c0/af61436dc026f8deebaded13d8e1beea2ae307cbbfb270116cdedadb8208f0674da9c3b5963128a2b1cd4072b4e90bc8128133f4feaf31b6e801e4568f1a15a6
+  languageName: node
+  linkType: hard
+
+"@lezer/css@npm:^1.0.0":
+  version: 1.1.8
+  resolution: "@lezer/css@npm:1.1.8"
+  dependencies:
+    "@lezer/common": "npm:^1.2.0"
+    "@lezer/highlight": "npm:^1.0.0"
+    "@lezer/lr": "npm:^1.0.0"
+  checksum: 10c0/d28a84c912eedd675b437a7d0b95c72a6c00987da7dc208049889f64ce57250e9ae640856d007a32df6b8f4b0c8986e7751b40e2536b4df26382a78ead362281
   languageName: node
   linkType: hard
 
@@ -66,6 +107,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "codemirror-theme-moonfly@workspace:."
   dependencies:
+    "@codemirror/lang-css": "npm:^6.2.1"
     "@codemirror/language": "npm:^6.10.1"
     "@codemirror/view": "npm:^6.26.3"
     "@lezer/highlight": "npm:^1.2.0"
