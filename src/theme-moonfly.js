@@ -209,7 +209,7 @@ export const moonflyHighlightBase = HighlightStyle.define([
   themeType: 'dark'
 });
 
-const moonflyHighlightCSS = HighlightStyle.define([
+export const moonflyHighlightCSS = HighlightStyle.define([
   {
     tag: [
       t.definitionKeyword,
