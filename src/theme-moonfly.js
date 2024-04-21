@@ -126,53 +126,73 @@ const moonflyHighlightBase = HighlightStyle.define([
       t.derefOperator,
       t.punctuation,
       t.variableName,
-      t.literal,
-      t.propertyName
+      t.propertyName,
     ],
     color: white
   }, {
-    tag: [ t.null, t.operatorKeyword, t.className ],
+    tag: [
+      t.null,
+      t.className,
+      t.function(t.punctuation), // Arrow function
+      t.typeName,
+      t.modifier,
+    ],
     color: emerald
   }, {
     tag: [ t.tagName, t.namespace ],
     color: blue
   }, {
-    tag: [ t.number, t.heading ],
+    tag: [
+      t.number,
+      t.heading,
+      t.character,
+    ],
     color: orange
   }, {
-    tag: [ t.keyword ],
+    tag: [
+      t.self
+    ],
     color: green
   }, {
     tag: [
       t.literal,
       t.bool,
+      t.keyword,
       t.moduleKeyword,
       t.constant,
       t.escape,
-      t.heading1
+      t.heading1,
     ],
     color: cranberry
   }, {
-    tag: [ t.regexp, t.constant(t.variableName) ],
+    tag: [
+      t.regexp,
+      t.constant(t.variableName)
+    ],
     color: purple
   }, {
     tag: t.string,
     color: khaki
   }, {
     tag: [
-      t.name,
       t.attributeName,
-      t.definition(t.attributeName)
+      t.definition(t.attributeName),
+      t.definition(t.typeName)
     ],
     color: turquoise
   }, {
-    tag: [ t.definitionKeyword, t.angleBracket ],
+    tag: [
+      t.angleBracket
+    ],
     color: lime
   }, {
-    tag: [ t.invalid ],
+    tag: [
+      t.invalid,
+    ],
     color: crimson
   }, {
     tag: [
+      t.definitionKeyword,
       t.controlKeyword,
       t.operatorKeyword,
       t.operator
