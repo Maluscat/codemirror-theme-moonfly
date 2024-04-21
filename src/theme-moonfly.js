@@ -18,12 +18,12 @@ const grey241   = '#626262';
 const grey239   = '#4e4e4e';
 const grey238   = '#444444';
 const grey237   = '#3a3a3a';
-const grey236   = '#303030';
+const grey236   = '#2e2e2e';
 const grey235   = '#262626';
 const grey234   = '#1c1c1c';
 // const grey233   = '#121212';
 // Core theme colors
-const khaki     = '#c2c292';
+const khaki     = '#c6c684';
 const yellow    = '#e3c78a';
 const orange    = '#de935f';
 const coral     = '#f09479';
@@ -34,6 +34,7 @@ const emerald   = '#36c692';
 const blue      = '#80a0ff';
 const sky       = '#74b2ff';
 const turquoise = '#79dac8';
+const lavender  = '#adadf3';
 const purple    = '#ae81ff';
 const cranberry = '#e65e72';
 const violet    = '#cf87e8';
@@ -173,12 +174,16 @@ const moonflyHighlightBase = HighlightStyle.define([
     color: violet
   }, {
     tag: [
-      t.definition(t.propertyName),
       t.function(t.propertyName),
       t.function(t.variableName),
       t.function(t.definition(t.variableName)),
     ],
     color: sky
+  }, {
+    tag: [
+      t.definition(t.propertyName),
+    ],
+    color: lavender
   }
 ], {
   themeType: 'dark'
