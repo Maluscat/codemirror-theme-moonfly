@@ -80,6 +80,12 @@ const moonflyTheme = EditorView.theme({
     }
   },
 
+  '.cm-foldPlaceholder': {
+    backgroundColor: grey236,
+    borderColor: grey254,
+    padding: '0 .15em',
+  },
+
   '.cm-activeLine': {
     backgroundColor: activeLine,
   },
