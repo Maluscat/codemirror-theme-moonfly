@@ -1,4 +1,5 @@
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
+import { cssLanguage } from '@codemirror/lang-css';
 import { EditorView } from '@codemirror/view';
 import { tags as t } from '@lezer/highlight';
 
@@ -146,6 +147,7 @@ export const moonflyHighlightBase = HighlightStyle.define([
       t.number,
       t.heading,
       t.character,
+      t.color
     ],
     color: orange
   }, {
@@ -166,7 +168,7 @@ export const moonflyHighlightBase = HighlightStyle.define([
     tag: [ t.regexp, t.constant(t.variableName) ],
     color: purple
   }, {
-    tag: [ t.string ],
+    tag: [ t.string, t.unit ],
     color: khaki
   }, {
     tag: [
@@ -191,6 +193,7 @@ export const moonflyHighlightBase = HighlightStyle.define([
     color: violet
   }, {
     tag: [
+      t.definitionOperator,
       t.function(t.propertyName),
       t.function(t.variableName),
       t.function(t.definition(t.variableName)),
@@ -206,17 +209,42 @@ export const moonflyHighlightBase = HighlightStyle.define([
   themeType: 'dark'
 });
 
-// const moonflyHighlightCSS = HighlightStyle.define([
-//   {
-//     tag: t.definitionOperator,
-//     color: turquoise
-//   }
-// ], {
-//   scope: cssLanguage,
-//   themeType: 'dark'
-// });
+const moonflyHighlightCSS = HighlightStyle.define([
+  {
+    tag: [
+      t.definitionKeyword,
+      t.squareBracket,
+      t.constant(t.className),
+      t.modifier,
+    ],
+    color: cranberry
+  }, {
+    tag: [ t.labelName ],
+    color: white
+  }, {
+    tag: [ t.keyword ],
+    color: green
+  }, {
+    tag: [ t.unit, t.attributeName ],
+    color: khaki
+  }, {
+    tag: [ t.propertyName ],
+    color: lavender
+  }, {
+    tag: [ t.operatorKeyword ],
+    color: sky
+  }, {
+    tag: [ t.variableName ],
+    color: orange
+  }
+], {
+  scope: cssLanguage,
+  themeType: 'dark'
+});
+
 
 export const moonfly = [
   moonflyTheme,
+  syntaxHighlighting(moonflyHighlightCSS),
   syntaxHighlighting(moonflyHighlightBase),
 ];
