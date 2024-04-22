@@ -1,5 +1,6 @@
 {
   "name": "codemirror-theme-moonfly",
+  "version": "1.0.0",
   "author": "Maluscat <hallo89@protonmail.com> (https://malus.channel/)",
   "license": "MIT",
   "description": "Dark theme for the CodeMirror editor, port of the Moonfly theme for Vim",
