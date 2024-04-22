@@ -1,5 +1,13 @@
 {
   "name": "codemirror-theme-moonfly",
+  "author": "Maluscat <hallo89@protonmail.com> (https://malus.channel/)",
+  "license": "MIT",
+  "description": "Dark theme for the CodeMirror editor, port of the Moonfly theme for Vim",
+  "keywords": ["codemirror", "codemirror-themes", "codemirror-editor", "theme"],
+  "homepage": "https://gitlab.com/Maluscat/codemirror-theme-moonfly",
+  "bugs": {
+    "url": "https://gitlab.com/Maluscat/codemirror-theme-moonfly/-/issues"
+  },
   "type": "module",
   "main": "./src/theme-moonfly.js",
   "packageManager": "yarn@4.1.1",
