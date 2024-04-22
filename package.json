@@ -4,7 +4,7 @@
   "author": "Maluscat <hallo89@protonmail.com> (https://malus.channel/)",
   "license": "MIT",
   "description": "Dark theme for the CodeMirror editor, port of the Moonfly theme for Vim",
-  "keywords": ["codemirror", "codemirror-themes", "codemirror-editor", "theme"],
+  "keywords": ["codemirror", "codemirror-theme", "codemirror-themes", "codemirror6", "theme"],
   "homepage": "https://gitlab.com/Maluscat/codemirror-theme-moonfly",
   "bugs": {
     "url": "https://gitlab.com/Maluscat/codemirror-theme-moonfly/-/issues"
